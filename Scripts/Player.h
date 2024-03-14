@@ -22,8 +22,8 @@ private:
     int yVel = 0;
     int speed;
 
-    static const int PLAYER_WIDTH = 20;
-    static const int PLAYER_HEIGHT = 20;
+    static const int PLAYER_WIDTH = 32;
+    static const int PLAYER_HEIGHT = 32;
 
 };
 #endif //CHAT_PLAYER_H

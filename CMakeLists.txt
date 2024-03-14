@@ -8,7 +8,9 @@ add_executable(${PROJECT_NAME}
         Scripts/Player.cpp
         Scripts/Player.h
         Scripts/Game.cpp
-        Scripts/Game.h)
+        Scripts/Game.h
+        Scripts/Map.cpp
+        Scripts/Map.h)
 
 set(CMAKE_MODULE_PATH "C:/Development/modules")
 set(SDL2_PATH "C:/Development/SDL2/x86_64-w64-mingw32")

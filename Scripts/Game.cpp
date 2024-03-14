@@ -1,8 +1,6 @@
 //
 // Created by svjat on 3/13/2024.
 //
-#include <SDL.h>
-#include <iostream>
 #include "Game.h"
 #include "Player.h"
 
