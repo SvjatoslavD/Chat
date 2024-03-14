@@ -7,10 +7,22 @@
 int main(int argc, char* args []) {
     Game game(SCREEN_WIDTH,SCREEN_HEIGHT);
     // Create a player
-    Player player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 1);
+    Player player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 5);
+
+    Uint32 currentTime = SDL_GetTicks();
+    //Denominator is the fps, numerator is to convert fps to be measured in miliseconds
+    double fpsTime = 1000/60;
 
     // While application is running
     while (game.isRunning()) {
+        //Makes the game run at deltatime
+        Uint32 newTime = SDL_GetTicks();
+        double frameTime = newTime - currentTime;
+        currentTime = newTime;
+
+        if (frameTime < fpsTime) {
+            SDL_Delay(fpsTime - frameTime);
+        }
 
         // Handle Events
         while (SDL_PollEvent(&game.e) != 0) {
